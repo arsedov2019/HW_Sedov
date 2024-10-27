@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <stdbool.h>
@@ -19,21 +20,21 @@ Node* createNode(int data);
 
 void initStack(Stack* stack);
 
-void destroyStack(Stack *stack);
+void destroyStack(Stack* stack);
 
 void push(Stack* stack, int data);
 
 void pop(Stack* stack);
 
-Node* searchByValue(Stack* stack, int value);
+Node* searchByValue(const Stack* stack, int value);
 
-Node* searchByIndex(Stack* stack, int index);
+Node* searchByIndex(const Stack* stack, int index);
 
-Node* getTop(Stack* stack);
+Node* getTop(const Stack* stack);
 
-void traverseStack(Stack* stack);
+void traverseStack(const Stack* stack);
 
-bool isEmpty(Stack* stack);
+bool isEmpty(const Stack* stack);
 
 #ifdef __cplusplus
 }
