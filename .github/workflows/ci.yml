@@ -17,8 +17,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1
+    - name: Configure CMake
+      run: cmake -B build -S 05_hw -DCMAKE_C_FLAGS="-fsanitize=address,undefined,leak -g"
 
     - name: Install dependencies
       run: sudo apt-get install -y gcc g++ cmake
